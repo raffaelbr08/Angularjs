@@ -1,0 +1,16 @@
+{
+  "name": "edson",
+  "version": "1.0.0",
+  "description": "execicio de carros",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "edson e rafael",
+  "license": "MIT",
+  "devDependencies": {
+    "bower": "^1.8.0",
+    "gulp": "^3.9.1",
+    "gulp-sass": "^3.1.0"
+  }
+}

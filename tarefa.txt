@@ -1,0 +1,8 @@
+﻿Criar um array com 7 carros
+Cada carro é um objeto com as seguintes chaves: name, color, color_id, id, ano
+Obs(Alguns carros devem ter o mesmo color_id e color, os ids devem ser todos diferentes)
+Imprimir na tela uma listagem  com o nome dos 7 carros e um checkbox pra cada carro
+Fazer um botão para exibir os carros selecionados com check
+Imprimir um container com  o nome dos carros selecionados
+Fazer um select de cores, pegando dinamicamente as cores do array e colocando nos options
+Ao selecionar uma cor, exibir os carros daquela cor

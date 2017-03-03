@@ -1,0 +1,21 @@
+{
+  "name": "edson",
+  "description": "execicio de carros",
+  "main": "index.js",
+  "authors": [
+    "edson e rafael"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "bootstrap": "^3.3.7",  
+    "jquery": "^3.1.1"
+  }
+}

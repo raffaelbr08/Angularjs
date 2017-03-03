@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br" ng-app="api-car">
+<head>
+	<meta charset="UTF-8">
+	<title>Exercício carros: Angular</title>	
+	<link rel="stylesheet" href="dist/css/style.css">
+	<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+	<style>
+		.box{
+			width: 20px;
+			height: 20px;
+		}
+		.selecionado{
+			background-color: #d4d4d4;
+		}
+	</style>
+
+</head>
+<body ng-controller="carrosSelecionadosCtrl">
+	<div class="container">
+		<header>
+			<h1>{{titulo}}</h1>
+		</header>		
+		<div class="panel panel-default">
+	  		<div class="panel-heading">
+	   		 <h3 class="panel-title">Listagem de Carros</h3>
+	  		</div>
+	  		<div class="panel-body">
+	   			 <table class="table">
+				    <thead>
+				        <tr>
+				            <th></th>
+				            <th>Marca</th>
+				            <th>Ano</th>
+				            <th>Cor</th>
+				        </tr>
+				    </thead>
+				    <tbody>
+				    
+				        <tr ng-repeat="carro in carros" ng-class="{'selecionado':selecionado}">
+				       		<td><input type="checkbox" ng-model="selecionado" ng-click="selectedCar(carro, selecionado)"/></td>
+				            <td>{{carro.nome}}</td>
+				            <td>{{carro.ano}}</td>
+				            <td><div class="box" ng-style="{'background-color': carro.cor}"></div></td>
+				        </tr>
+				    </tbody>
+				</table>
+				<button class="btn btn-primary btn-block" ng-click="mover()">Selecione os carros</button>
+	  		</div>
+		</div>
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h4 class="panel-title">
+					Meus carros
+				</h4>
+			</div>
+			<div class="panel-body">
+				<ul>
+					<li ng-repeat="carSelected in showCarSelected">{{carSelected.nome}}</li>
+				</ul>
+			</div>
+		</div>
+		<select class="form-control" ng-model="valorCor" ng-options="asCores.cor for asCores in carros" ng-change="myFunction(valorCor)">	
+			<option value="">Selecione uma cor</option>
+		</select>
+		<hr>
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h4 class="panel-title">
+					Cor escolhida
+				</h4>
+			</div>
+			<div class="panel-body">
+				<ul>
+					<li ng-repeat="carro in colorsOfCar">{{carro.nome}}</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<script src="assets/js/angular.min.js"></script>
+	<script src="assets/js/controllerCars.js"></script>
+</body>
+</html>
